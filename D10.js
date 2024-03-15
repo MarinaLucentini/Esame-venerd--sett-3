@@ -183,16 +183,16 @@ console.log(rollTheDices(3));
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e 
   ritorna il numero di giorni trascorsi da tale data.
 // */
-// const howManyDays = (year, month, day) => {
-//   let now = new Date().valueOf();
-//   let dataFornita = new Date(year, month, day).valueOf();
-//   let howMany = dataFornita - now;
-//   // let howManyDays = today - data;
-//   return howMany;
-// };
-// console.log(howManyDays(2024, 3, 13));
+const howManyDays = (data) => {
+  let now = new Date();
+  let dataFornita = new Date(data);
+  let howMany = (now - dataFornita) / (1000 * 60 * 60 * 24);
+  // let howManyDays = today - data;
+  return howMany;
+};
+console.log(howManyDays("2024-03-12"));
 
-// // non sono riuscita a farlo mi dispiace
+// non sono riuscita a farlo mi dispiace
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
