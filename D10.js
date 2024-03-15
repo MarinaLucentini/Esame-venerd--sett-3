@@ -110,19 +110,11 @@ console.log(deleteOne("Epicode", false));
 
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
-// const onlyLetters = (string) => {
-//   let onlyLetters2 = string.split(" ");
-//   let onlyLetters3 = [];
-//   let onlyNumber = [];
-//   for (let i = 0; i < onlyLetters2.length; i++) {
-//     if (typeof parseInt(onlyLetters2[i]) === "number") {
-//       onlyNumber.push(onlyLetters2[i]);
-//     }
-//     ;
-//   }
-//   console.log(onlyNumber);
-// };
-// onlyLetters("Sono riuscita a fare 5 esercizi"); // in questo caso il numero 5 lo legge come stringa
+const onlyLetters = (str) => {
+  return str.replace(/\d/g, "");
+};
+console.log(onlyLetters("Sono riuscita a fare 5 esercizi!!!"));
+// in questo caso il numero 5 lo legge come stringa
 
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se 
@@ -191,15 +183,13 @@ console.log(rollTheDices(3));
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e 
   ritorna il numero di giorni trascorsi da tale data.
 */
-// const howManyDays = (data) => {
-//   let now = new Date();
-//   let year = now.getFullYear();
-//   let month = now.getMonth();
-//   let day = now.getDate();
-//   let onlyDate = year + month + day;
-//   return onlyDate;
-// };
-// console.log(howManyDays());
+const howManyDays = (data) => {
+  let now = new Date();
+  let Today = (now.getDate(), now.getMonth(), now.getFullYear());
+  // let howManyDays = day - data;
+  return Today;
+};
+console.log(howManyDays());
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
